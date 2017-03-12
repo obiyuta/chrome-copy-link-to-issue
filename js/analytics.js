@@ -5,4 +5,4 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-43703750-2', 'auto');
 ga('set', 'checkProtocolTask', null);
-ga('send', 'pageview');
+ga('send', 'pageview', {page: '/popup.html', title: 'popup'});
