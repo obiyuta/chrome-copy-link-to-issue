@@ -1,6 +1,6 @@
 {
   "name": "Copy the link to GitHub issue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Copy the link to a GitHub issue as markdown/html/plaintext",
   "background": {
     "scripts": ["js/background.js"],
