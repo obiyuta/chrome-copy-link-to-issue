@@ -1,0 +1,25 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#buttons {
+  width: 90px;
+  padding: 2px 0px;
+}
+
+#buttons button {
+  width: 100%;
+  font-weight: bold;
+  color: #333333;
+  outline: none;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 4px 10px;
+}
+
+#buttons button:active {
+  background: #f7f7f7;
+}

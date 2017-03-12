@@ -1,0 +1,32 @@
+{
+  "name": "Copy the link to GitHub issue",
+  "version": "0.0.1",
+  "description": "Copy the link to a GitHub issue as markdown/html/plaintext",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "images/icon32.png",
+    "default_title": "copy",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/content.js"],
+      "matches": ["https://github.com/*/*/issues/*"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "clipboardWrite",
+    "declarativeContent"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "24": "images/icon24.png",
+    "32": "images/icon32.png",
+    "128": "images/icon128.png"
+  },
+  "manifest_version": 2
+}
