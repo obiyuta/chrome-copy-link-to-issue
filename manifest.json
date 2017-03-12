@@ -1,6 +1,6 @@
 {
   "name": "Copy the link to GitHub issue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Copy the link to a GitHub issue as markdown/html/plaintext",
   "background": {
     "scripts": ["js/background.js"],
@@ -17,6 +17,7 @@
       "matches": ["https://github.com/*/*/issues/*"]
     }
   ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "permissions": [
     "tabs",
     "clipboardWrite",

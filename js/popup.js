@@ -1,5 +1,6 @@
 var buttons = document.getElementById("buttons");
 buttons.addEventListener("click", function (e) {
+  ga('send', 'event', 'copy', 'click', e.target.id);
   sendClick(e.target.id);
   window.close();
 });
