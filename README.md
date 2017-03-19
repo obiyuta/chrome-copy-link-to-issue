@@ -11,6 +11,6 @@ You can install it through the [Chrome web store](https://chrome.google.com/webs
 ## Features
 
 - Copy as ...
- - Markdown: `[#number｜title](url)`
- - HTML: `<a href="url">#number｜title</a>`
- - Plain text: `#number｜title url`
+  - Markdown: `[#number｜title](url)`
+  - HTML: `<a href="url">#number｜title</a>`
+  - Plain text: `#number｜title url`

@@ -3,17 +3,17 @@
   "version": "0.0.3",
   "description": "Copy the link to a GitHub issue as markdown/html/plaintext",
   "background": {
-    "scripts": ["js/background.js"],
+    "scripts": ["scripts/background.js"],
     "persistent": false
   },
   "page_action": {
     "default_icon": "images/icon32.png",
     "default_title": "copy",
-    "default_popup": "popup.html"
+    "default_popup": "views/popup.html"
   },
   "content_scripts": [
     {
-      "js": ["js/content.js"],
+      "js": ["scripts/content.js"],
       "matches": ["https://github.com/*/*/issues/*"]
     }
   ],

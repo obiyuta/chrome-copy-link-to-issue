@@ -9,14 +9,14 @@ function copy(format) {
 }
 
 function execCopy(text) {
-  var textArea = document.createElement("textarea");
-  textArea.style.cssText = "position:absolute;left:-100%;";
+  var textArea = document.createElement('textarea');
+  textArea.style.cssText = 'position:absolute;left:-100%;';
 
   document.body.appendChild(textArea);
 
   textArea.value = text;
   textArea.select();
-  document.execCommand("copy");
+  document.execCommand('copy');
 
   document.body.removeChild(textArea);
 }
