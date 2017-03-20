@@ -1,7 +1,8 @@
 {
-  "name": "Copy the link to GitHub issue",
-  "version": "0.0.3",
-  "description": "Copy the link to a GitHub issue as markdown/html/plaintext",
+  "version": "0.0.4",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "ja",
   "background": {
     "scripts": ["scripts/background.js"],
     "persistent": false

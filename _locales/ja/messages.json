@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Copy the link to GitHub issue"
+  },
+  "extDescription": {
+    "message": "GitHub issueへのリンクをMarkdown/HTML/プレーンテキストでいい感じにコピーできます。"
+  },
+}
