@@ -12,15 +12,10 @@
     "default_title": "copy",
     "default_popup": "views/popup.html"
   },
-  "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": ["https://github.com/*/*/issues/*"]
-    }
-  ],
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "permissions": [
     "clipboardWrite",
+    "activeTab",
     "declarativeContent"
   ],
   "icons": {
