@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
             pageUrl: {
               hostEquals: 'github.com',
               schemes: ['https'],
-              urlMatches: '/(.+)/(.+)/issues/(\\d+)'
+              urlMatches: '/(.+)/(.+)/issues|pull/(\\d+)'
             },
             css: ['span.js-issue-title', 'span.gh-header-number']
           })
