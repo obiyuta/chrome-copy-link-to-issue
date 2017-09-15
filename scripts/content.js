@@ -29,18 +29,24 @@
     var title = document.querySelectorAll(`${h1} .js-issue-title`)[0].innerText.trim();
     var num = document.querySelectorAll(`${h1} .gh-header-number`)[0].innerText;
     var url = window.location.href;
+    var type = isPullRequestUrl(url) ? ' (Pull request)' : '';
 
     switch (format) {
       case 'markdown':
-        return `[${num}｜${title}](${url})`;
+        return `[${num}｜${title}${type}](${url})`;
         break;
       case 'html':
-        return `<a href="${url}">${num}｜${title}</a>`;
+        return `<a href="${url}">${num}｜${title}${type}</a>`;
         break;
       case 'plain':
-        return `${num}｜${title}\n${url}`;
+        return `${num}｜${title}${type}\n${url}`;
         break;
     }
     return '';
   }
+
+  function isPullRequestUrl(url) {
+    return /^https:\/\/github.com\/(.+)\/(.+)\/pull\/(\d+)/.test(url)
+  }
 })();
+
