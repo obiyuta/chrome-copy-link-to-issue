@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(function() {
               schemes: ['https'],
               urlMatches: '/(.+)/(.+)/issues|pull/(\\d+)'
             },
-            css: ['span.js-issue-title', 'span.gh-header-number']
+            css: ['.gh-header-title']
           })
         ],
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
