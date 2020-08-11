@@ -27,7 +27,7 @@
   function getFormattedIssueLink(format) {
     var h1 = 'h1.gh-header-title';
     var title = document.querySelectorAll(`${h1} .js-issue-title`)[0].innerText.trim();
-    var num = document.querySelectorAll(`${h1} .gh-header-number`)[0].innerText;
+    var num = document.querySelectorAll(`${h1} .f1-light`)[0].innerText;
     var url = window.location.href;
     var type = isPullRequestUrl(url) ? ' (Pull request)' : '';
 
