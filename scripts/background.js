@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener(function() {
             css: ['.gh-header-title']
           })
         ],
-        actions: [ new chrome.declarativeContent.ShowPageAction() ]
+        actions: [ new chrome.declarativeContent.ShowAction() ]
       }
     ]);
   });

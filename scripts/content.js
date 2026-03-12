@@ -8,20 +8,7 @@
   });
 
   function copy(format) {
-    return execCopy(getFormattedIssueLink(format));
-  }
-
-  function execCopy(text) {
-    var textArea = document.createElement('textarea');
-    textArea.style.cssText = 'position:absolute;left:-100%;';
-
-    document.body.appendChild(textArea);
-
-    textArea.value = text;
-    textArea.select();
-    document.execCommand('copy');
-
-    document.body.removeChild(textArea);
+    navigator.clipboard.writeText(getFormattedIssueLink(format));
   }
 
   function getFormattedIssueLink(format) {
@@ -49,4 +36,3 @@
     return /^https:\/\/github.com\/(.+)\/(.+)\/pull\/(\d+)/.test(url)
   }
 })();
-

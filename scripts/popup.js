@@ -1,6 +1,5 @@
 var buttons = document.getElementById('buttons');
 buttons.addEventListener('click', function (e) {
-  ga('send', 'event', 'copy', 'click', e.target.id);
   sendClick(e.target.id, function () {
     window.close();
   });
@@ -8,8 +7,9 @@ buttons.addEventListener('click', function (e) {
 
 function sendClick(formatType, callback) {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(tabs[0].id, {
-      "file": "scripts/content.js"
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      files: ["scripts/content.js"]
     }, function () {
       chrome.tabs.sendMessage(tabs[0].id, {format: formatType}, callback);
     });
