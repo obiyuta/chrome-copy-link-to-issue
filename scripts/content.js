@@ -2,19 +2,18 @@
   if (window.isAlreadyPrepared) return;
   window.isAlreadyPrepared = true;
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (!!request.format) {
-      copy(request.format);
+    if (request.format) {
+      sendResponse({ text: getFormattedIssueLink(request.format) });
+    } else {
+      sendResponse({});
     }
   });
 
-  function copy(format) {
-    navigator.clipboard.writeText(getFormattedIssueLink(format));
-  }
-
   function getFormattedIssueLink(format) {
-    var h1 = 'h1.gh-header-title';
-    var title = document.querySelectorAll(`${h1} .js-issue-title`)[0].innerText.trim();
-    var num = document.querySelectorAll(`${h1} .f1-light`)[0].innerText;
+    var titleEl = document.querySelector('[data-component="TitleArea"] .markdown-title');
+    var title = titleEl ? titleEl.innerText.trim() : '';
+    var match = window.location.pathname.match(/\/(issues|pull)\/(\d+)/);
+    var num = match ? '#' + match[2] : '';
     var url = window.location.href;
     var type = isPullRequestUrl(url) ? ' (Pull request)' : '';
 
