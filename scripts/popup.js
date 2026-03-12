@@ -11,7 +11,11 @@ function sendClick(formatType, callback) {
       target: { tabId: tabs[0].id },
       files: ["scripts/content.js"]
     }, function () {
-      chrome.tabs.sendMessage(tabs[0].id, {format: formatType}, callback);
+      chrome.tabs.sendMessage(tabs[0].id, {format: formatType}, function(response) {
+        if (response && response.text) {
+          navigator.clipboard.writeText(response.text).then(callback);
+        }
+      });
     });
   });
 }

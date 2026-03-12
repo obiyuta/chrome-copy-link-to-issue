@@ -1,4 +1,5 @@
 chrome.runtime.onInstalled.addListener(function() {
+  chrome.action.disable();
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([
       {
@@ -7,9 +8,9 @@ chrome.runtime.onInstalled.addListener(function() {
             pageUrl: {
               hostEquals: 'github.com',
               schemes: ['https'],
-              urlMatches: '/(.+)/(.+)/issues|pull/(\\d+)'
+              urlMatches: '/(.+)/(.+)/(issues|pull)/(\\d+)'
             },
-            css: ['.gh-header-title']
+            css: ['.markdown-title']
           })
         ],
         actions: [ new chrome.declarativeContent.ShowAction() ]
