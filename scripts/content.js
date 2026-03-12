@@ -21,9 +21,6 @@
       case 'markdown':
         return `[${num}｜${title}${type}](${url})`;
         break;
-      case 'html':
-        return `<a href="${url}">${num}｜${title}${type}</a>`;
-        break;
       case 'plain':
         return `${num}｜${title}${type}\n${url}`;
         break;
