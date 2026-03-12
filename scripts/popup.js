@@ -1,6 +1,8 @@
 var buttons = document.getElementById('buttons');
 buttons.addEventListener('click', function (e) {
-  sendClick(e.target.id, function () {
+  var item = e.target.closest('.ActionList-item');
+  if (!item) return;
+  sendClick(item.id, function () {
     window.close();
   });
 });

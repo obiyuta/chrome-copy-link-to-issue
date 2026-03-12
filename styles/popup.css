@@ -1,25 +1,68 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f2328;
+}
+
+.ActionMenu {
+  width: 220px;
+  padding: 4px 0;
+}
+
+.ActionMenu-header {
+  font-size: 12px;
+  font-weight: 600;
+  color: #656d76;
+  padding: 6px 16px;
+}
+
+.ActionMenu-divider {
+  height: 1px;
+  background: #d1d9e0;
+  margin: 4px 0;
+}
+
+.ActionList {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#buttons {
-  width: 90px;
-  padding: 2px 0px;
-}
-
-#buttons button {
-  width: 100%;
-  font-weight: bold;
-  color: #333333;
-  outline: none;
+.ActionList-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  margin: 0 4px;
+  border-radius: 6px;
   border: none;
   background: none;
-  text-align: left;
-  padding: 4px 10px;
+  font-size: 14px;
+  color: #1f2328;
+  cursor: pointer;
 }
 
-#buttons button:active {
-  background: #f7f7f7;
+.ActionList-item:hover {
+  background: #eef1f4;
+}
+
+.ActionList-item:active {
+  background: #d1d9e0;
+}
+
+.ActionList-item:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: -2px;
+}
+
+.ActionList-item > * {
+  pointer-events: none;
+}
+
+.ActionList-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #656d76;
+  flex-shrink: 0;
 }

@@ -3,11 +3,21 @@
 	<head>
 		<link href="../styles/popup.css" rel="stylesheet">
 	</head>
-  <body>
-		<div id="buttons">
-			<button id="markdown">Markdown</button>
-			<button id="plain">Plain text</button>
+	<body>
+		<div class="ActionMenu">
+			<div class="ActionMenu-header">Copy link as</div>
+			<div class="ActionMenu-divider"></div>
+			<ul class="ActionList" id="buttons" role="menu">
+				<li class="ActionList-item" id="markdown" role="menuitem" tabindex="0">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M14.85 3c.63 0 1.15.52 1.14 1.15v7.7c0 .63-.51 1.15-1.15 1.15H1.15C.52 13 0 12.48 0 11.84V4.15C0 3.52.52 3 1.15 3ZM9 11V5H7L5.5 7 4 5H2v6h2V8l1.5 1.92L7 8v3Zm2.99.5L14.5 8H13V5h-2v3H9.5Z"/></svg>
+					<span>Markdown</span>
+				</li>
+				<li class="ActionList-item" id="plain" role="menuitem" tabindex="0">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.71 10H2.332l-.874 2.498a.75.75 0 0 1-1.415-.496l3.39-9.688a1.217 1.217 0 0 1 2.302.018l3.227 9.681a.75.75 0 0 1-1.423.474Zm-.536-1.5L4.527 3.65 2.858 8.5ZM14.75 10.5a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></svg>
+					<span>Plain text</span>
+				</li>
+			</ul>
 		</div>
-    <script type="text/javascript" src="../scripts/popup.js"></script>
-  </body>
+		<script type="text/javascript" src="../scripts/popup.js"></script>
+	</body>
 </html>
